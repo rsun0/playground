@@ -143,7 +143,7 @@ class Pomme(gym.Env):
             self._game_type, self._env)
         for obs in self.observations:
             obs['step_count'] = self._step_count
-        self.observations['json_info'] = self.get_json_info()
+            obs['json_info'] = self.get_json_info()
         return self.observations
 
     def _get_rewards(self):
